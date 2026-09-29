@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help - Purrlogic</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.6;
+      color: #222;
+    }
+    h1, h2 { margin-top: 28px; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #ddd; }
+    a { color: #5c2a9a; }
+  </style>
+</head>
+<body>
+
+<h1>Purrlogic Help</h1>
+<p>Rules, controls, scoring, and navigation for Purrlogic.</p>
+
+<h2>How to Play</h2>
+<p>Place one queen in every region so the board is fully cleared.</p>
+
+<h3>Rules</h3>
+<ul>
+  <li>Exactly 1 correct placement per region.</li>
+  <li>Exactly 1 correct placement per row.</li>
+  <li>Exactly 1 correct placement per column.</li>
+  <li>Correct placements cannot touch, including diagonally.</li>
+</ul>
+
+<h3>Controls</h3>
+<ul>
+  <li>Tap a cell to toggle an X (elimination).</li>
+  <li>Drag to paint or erase Xs across cells.</li>
+  <li>Double-tap to commit a placement.</li>
+</ul>
+
+<h3>Action Bar</h3>
+<ul>
+  <li><strong>CLEAR Xs</strong> removes all rule-out X markers from the board.</li>
+  <li><strong>PAUSE</strong> pauses gameplay and the timer until you resume.</li>
+  <li><strong>EXPOSE</strong> uncovers one correct answer when you're stuck. The exposed answer earns no Found or Reveal credit, ends your current streak, prevents a Perfect Game, and adds 60 seconds to your time. Health is unaffected.</li>
+</ul>
+<p>Using EXPOSE also reduces the Found maximum. Example: FOUND 0/8 becomes FOUND 0/7 after one EXPOSE.</p>
+
+<h3>Tips</h3>
+<ul>
+  <li>X marks are eliminations. They are not mistakes and do not cost Health.</li>
+  <li>You have 3 Health. A wrong commit removes one Health.</li>
+  <li>If Health reaches zero, the attempt fails and you can try again.</li>
+  <li>Adding or removing an X breaks your streak for scoring.</li>
+</ul>
+
+<h2>How to Score</h2>
+<p>Final Score is the sum of Cleared, Health Bonus, Reveal Bonus, Streak Bonus, and Time Score.</p>
+
+<h3>Cleared</h3>
+<p>Each correct placement is worth 1,000 points. For a finished puzzle, Cleared equals grid size × 1,000.</p>
+<p>Example: 8×8 → Cleared 8,000.</p>
+
+<h3>Health Bonus</h3>
+<p>On a successful clear, remaining Health awards 1,000 points each, up to 3 Health. Wrong commits do not subtract score; they only reduce Health.</p>
+<ul>
+  <li>3 Health → 3,000.</li>
+  <li>2 Health → 2,000.</li>
+  <li>1 Health → 1,000.</li>
+  <li>0 Health ends the attempt before a clear.</li>
+</ul>
+
+<h3>Reveal Bonus</h3>
+<p>A reveal qualifies when its order matches its row number. The 1st correct reveal in Row 1 qualifies, the 2nd in Row 2 qualifies, and so on. Each qualifying reveal awards +250.</p>
+<p>Example: the first reveal in Row 3 does not qualify. If the second reveal is in Row 2, that second reveal does qualify.</p>
+
+<h3>Streak Bonus</h3>
+<p>Streak grows with consecutive correct reveals. A wrong commit, or adding/removing an X, breaks the streak. Streak points begin on the second consecutive correct reveal and increase by 100 points at each awarding step.</p>
+<table>
+  <thead><tr><th>Streak length</th><th>Bonus</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>0</td></tr>
+    <tr><td>2</td><td>+100</td></tr>
+    <tr><td>3</td><td>+200</td></tr>
+    <tr><td>4</td><td>+300</td></tr>
+    <tr><td>5</td><td>+400</td></tr>
+    <tr><td>6</td><td>+500</td></tr>
+    <tr><td>7</td><td>+600</td></tr>
+    <tr><td>8</td><td>+700</td></tr>
+  </tbody>
+</table>
+
+<h3>Perfect Game</h3>
+<p>Perfect Game requires full Health, full Reveal, and full Streak on the successful clear. Time Score does not affect Perfect Game.</p>
+
+<h3>Time Score</h3>
+<p>Time Score awards +1 point for each whole second under 10:00 of active play time, plus one qualifying completion-time cutoff bonus. Cutoffs do not stack, and Time Score never goes below 0.</p>
+<ul>
+  <li>Under 30 seconds: +750 cutoff bonus.</li>
+  <li>30–59 seconds: +500.</li>
+  <li>60–89 seconds: +300.</li>
+  <li>90–119 seconds: +200.</li>
+  <li>120–149 seconds: +100.</li>
+  <li>150–179 seconds: +50.</li>
+  <li>3:00 or slower: +0 cutoff bonus.</li>
+</ul>
+
+<h3>Daily Story</h3>
+<p>Daily Story uses the same per-chapter scoring, then adds a Story Lives Bonus after all five chapters. Failed Story attempts bank 0 for that chapter.</p>
+
+<h2>How to Navigate</h2>
+<p>Home is the main hub for Purrlogic.</p>
+
+<h3>Home Sections</h3>
+<ul>
+  <li><strong>The Climb</strong> contains progressive Levels and Mastery.</li>
+  <li><strong>The Dailies</strong> contains shared Single and Story challenges.</li>
+  <li><strong>The Sandbox</strong> contains Practice, Tutorials, and Achievements.</li>
+</ul>
+
+<h3>NEW Indicators</h3>
+<ul>
+  <li>Purple NEW chrome marks something newly unlocked or newly earned that you have not reviewed yet.</li>
+  <li>Follow NEW into the destination, then into any highlighted category or item.</li>
+  <li>NEW clears after you view or acknowledge the item under the normal rules for that feature.</li>
+</ul>
+
+<h3>Settings</h3>
+<p>Tap the gear to open Settings. Music, Effects, Haptics, Data, and Help are available there. Help opens this documentation and is separate from the interactive Tutorials in the game.</p>
+
+<p><a href="../privacy/">Privacy Policy</a></p>
+
+</body>
+</html>
